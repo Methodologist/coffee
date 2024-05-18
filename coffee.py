@@ -46,12 +46,18 @@ class Coffee():
         sip_amount = 10
         if self.volume >= sip_amount:
             self.volume -= sip_amount
+        else:
+            self.volume -= self.volume
+            print("You finish what's left with a micro-sip.")
         print(f"You take a sip, {int(self.volume)}% remains")
 
     def gulp(self):
         gulp_amount = 20
         if self.volume >= gulp_amount:
             self.volume -= gulp_amount
+        else:
+            self.volume -= self.volume
+            print("You finish what's left with a sip.")
         print(f"You take a gulp, {int(self.volume)}% remains")
 
 def main():
